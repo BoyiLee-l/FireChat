@@ -21,6 +21,7 @@
 		CEBA38842851D4A20062B976 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBA38832851D4A20062B976 /* LoginViewModel.swift */; };
 		CECE3F6A26E769DA00A9BC92 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE3F6926E769DA00A9BC92 /* Extensions.swift */; };
 		CECE3F6C26F0824B00A9BC92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECE3F6B26F0824B00A9BC92 /* Assets.xcassets */; };
+		CEE2B2B328531FE1007B2D52 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2B2B228531FE1007B2D52 /* RegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		CEBA38832851D4A20062B976 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CECE3F6926E769DA00A9BC92 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CECE3F6B26F0824B00A9BC92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEE2B2B228531FE1007B2D52 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		D0152235E5A44FEC2715CEF9 /* Pods-FireChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChat.debug.xcconfig"; path = "Target Support Files/Pods-FireChat/Pods-FireChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,7 +123,7 @@
 		CE53290526D744FC0037BC94 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CEBA38832851D4A20062B976 /* LoginViewModel.swift */,
+				CEE2B2B428531FFA007B2D52 /* Authentication */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -147,6 +149,15 @@
 			children = (
 				CE6C13CD26E61A330087CF55 /* LoginController.swift */,
 				CE6C13CF26E61A530087CF55 /* RegistrationController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CEE2B2B428531FFA007B2D52 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CEBA38832851D4A20062B976 /* LoginViewModel.swift */,
+				CEE2B2B228531FE1007B2D52 /* RegistrationViewModel.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -275,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5328F426D743FF0037BC94 /* ViewController.swift in Sources */,
+				CEE2B2B328531FE1007B2D52 /* RegistrationViewModel.swift in Sources */,
 				CE0EF4412850957E00202AFD /* InputContainerView.swift in Sources */,
 				CE5328F026D743FF0037BC94 /* AppDelegate.swift in Sources */,
 				CE76FCAA26DCB3DF00634804 /* ConversationsController.swift in Sources */,

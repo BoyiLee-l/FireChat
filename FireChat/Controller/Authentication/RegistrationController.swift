@@ -12,6 +12,8 @@ class RegistrationController: UIViewController {
     
     //MARK: - Properties
     
+    private var viewModel = RegistrationViewModel()
+    
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type:  .system)
         button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
@@ -128,6 +130,10 @@ class RegistrationController: UIViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
+    
+    func configureNotificationObservers() {
+        
+    }
 }
 
 extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -141,3 +147,4 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
         dismiss(animated: true)
     }
 }
+
