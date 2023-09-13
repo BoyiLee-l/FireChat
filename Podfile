@@ -8,7 +8,8 @@ target 'FireChat' do
   # Pods for FireChat
   pod 'SnapKit'
   pod 'Firebase/Core'
-  pod 'Firebase/Auth'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
   pod 'Firebase/Database' 
   pod 'Firebase/Storage'
   pod 'SDWebImage', '~> 5.0'
