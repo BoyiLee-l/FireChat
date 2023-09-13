@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CB9CE252AB1A26200B06AEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */; };
 		805BEA0F84CD64FBFF7630D8 /* Pods_FireChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02967383DCF8E5EE754465B6 /* Pods_FireChat.framework */; };
 		CE0EF4412850957E00202AFD /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EF4402850957E00202AFD /* InputContainerView.swift */; };
 		CE0EF4442850A24A00202AFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EF4432850A24A00202AFD /* CustomTextField.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		02967383DCF8E5EE754465B6 /* Pods_FireChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		085956934637351077D2F71E /* Pods-FireChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChat.release.xcconfig"; path = "Target Support Files/Pods-FireChat/Pods-FireChat.release.xcconfig"; sourceTree = "<group>"; };
+		2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE0EF4402850957E00202AFD /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
 		CE0EF4432850A24A00202AFD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		CE5328EC26D743FF0037BC94 /* FireChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +89,6 @@
 		CE5328EE26D743FF0037BC94 /* FireChat */ = {
 			isa = PBXGroup;
 			children = (
-				CE53290726D745010037BC94 /* Model */,
 				CE53290626D744FE0037BC94 /* View */,
 				CE53290526D744FC0037BC94 /* ViewModel */,
 				CE53290426D744FA0037BC94 /* Controller */,
@@ -99,6 +100,7 @@
 				CE5328FA26D744010037BC94 /* LaunchScreen.storyboard */,
 				CECE3F6B26F0824B00A9BC92 /* Assets.xcassets */,
 				CE5328FD26D744010037BC94 /* Info.plist */,
+				2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */,
 			);
 			path = FireChat;
 			sourceTree = "<group>";
@@ -135,13 +137,6 @@
 				CE0EF4432850A24A00202AFD /* CustomTextField.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		CE53290726D745010037BC94 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		CE6C13CC26E619E40087CF55 /* Authentication */ = {
@@ -231,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5328FC26D744010037BC94 /* LaunchScreen.storyboard in Resources */,
+				2CB9CE252AB1A26200B06AEE /* GoogleService-Info.plist in Resources */,
 				CECE3F6C26F0824B00A9BC92 /* Assets.xcassets in Resources */,
 				CE5328F726D743FF0037BC94 /* Main.storyboard in Resources */,
 			);
@@ -444,6 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FireChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -463,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FireChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
