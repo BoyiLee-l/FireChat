@@ -13,8 +13,8 @@ import FirebaseFirestore
 class RegistrationController: UIViewController {
     
     //MARK: - Properties
-    
     private var viewModel = RegistrationViewModel()
+    
     private var profileImage: UIImage?
     
     private let plusPhotoButton: UIButton = {
@@ -100,44 +100,19 @@ class RegistrationController: UIViewController {
         guard let username = usernameTextField.text?.lowercased() else { return }
         guard let profileImage = profileImage else { return }
         
-        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
+        let credentials = RegistrationCredentials(email: email,
+                                                  password: password,
+                                                  fullname: fullname,
+                                                  username: username,
+                                                  profileImage: profileImage)
         
-        let filename = NSUUID().uuidString
-        let ref = Storage.storage().reference(withPath: "/profile_images/\(filename)")
-        
-        ref.putData(imageData, metadata: nil) { (meta, error) in
+        AuthService.shared.createUser(credentials: credentials) { error in
             if let error = error {
-                print("DEBUG Failed to upload image with error \(error.localizedDescription)")
+                print("DEBUG: Failed to Registration in with error \(error.localizedDescription)")
                 return
             }
-            
-            ref.downloadURL { (url, error) in
-                guard let profileImageUrl = url?.absoluteString else { return }
-                
-                Auth.auth().createUser(withEmail: email, password: password) {(result,error) in
-                    if let error = error {
-                        print("DEBUG Failed to upload image with error \(error.localizedDescription)")
-                        return
-                    }
-                    
-                    guard let uid = result?.user.uid else { return }
-                    
-                    let data = ["email": email,
-                                "fullname": fullname,
-                                "profileImageUrl": profileImageUrl,
-                                "uid": uid,
-                                "username": username] as [String : Any]
-                    
-                    Firestore.firestore().collection("users").document(uid).setData(data) { error in
-                        if let error = error {
-                            print("DEBUG Failed to upload user data with error \(error.localizedDescription)")
-                            return
-                        }
-                        print("DEBUG: Did create user.....")
-                    }
-                    
-                }
-            }
+            print("DEBUG: User Registration successful")
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

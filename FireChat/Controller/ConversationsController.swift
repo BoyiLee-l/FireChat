@@ -40,7 +40,9 @@ class ConversationsController: UIViewController {
     
     func logout() {
         do {
+            print("LogOut")
             try Auth.auth().signOut()
+            presentLoginScreen()
         } catch {
             print("DEBUG: Error signing out...")
         }
@@ -59,13 +61,12 @@ class ConversationsController: UIViewController {
     
     func configureUI() {
         view.backgroundColor = .white
-
         configureNavigantionBar()
         configureTableView()
         
         let image = UIImage(systemName: "person.circle.fill")
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain,
-                                                           target: self, action: #selector(showProfile))
+                                                    target: self, action: #selector(showProfile))
     }
     
     func configureTableView() {

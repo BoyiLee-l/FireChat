@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 protocol AuthenicationControllerProtocol {
     func checkFormStatus()
@@ -38,7 +40,7 @@ class LoginController: UIViewController {
         button.setTitle("Log In", for: .normal)
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.8470588235)
         button.setTitleColor(.white, for: .normal)
         button.setHeight(height: 50)
         button.isEnabled = false
@@ -81,7 +83,17 @@ class LoginController: UIViewController {
     
     //MARK: -Selectors
     @objc func handleLogin() {
-       print("welecome")
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        AuthService.shared.logUserIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("DEBUG: Failed to log in with error \(error.localizedDescription)")
+                return
+            }
+            print("DEBUG: User login successful")
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @objc func handleShowSignUp() {
