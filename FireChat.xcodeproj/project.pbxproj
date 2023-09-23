@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2C010A822ABE92150038D1A4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C010A812ABE92150038D1A4 /* AuthService.swift */; };
 		2CB9CE252AB1A26200B06AEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */; };
+		2CC87CBE2ABEC43C0073DE3B /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC87CBD2ABEC43C0073DE3B /* NewMessageController.swift */; };
+		2CC87CC02ABEE1340073DE3B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC87CBF2ABEE1340073DE3B /* UserCell.swift */; };
+		2CC87CC32ABEE5A80073DE3B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC87CC22ABEE5A80073DE3B /* User.swift */; };
+		2CC87CC52ABEE60D0073DE3B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC87CC42ABEE60D0073DE3B /* Service.swift */; };
 		CE0EF4412850957E00202AFD /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EF4402850957E00202AFD /* InputContainerView.swift */; };
 		CE0EF4442850A24A00202AFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EF4432850A24A00202AFD /* CustomTextField.swift */; };
 		CE5328F026D743FF0037BC94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5328EF26D743FF0037BC94 /* AppDelegate.swift */; };
@@ -29,6 +33,10 @@
 /* Begin PBXFileReference section */
 		2C010A812ABE92150038D1A4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2CC87CBD2ABEC43C0073DE3B /* NewMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
+		2CC87CBF2ABEE1340073DE3B /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		2CC87CC22ABEE5A80073DE3B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2CC87CC42ABEE60D0073DE3B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		2F723214DC9E86D521F02F2F /* Pods-FireChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChat.debug.xcconfig"; path = "Target Support Files/Pods-FireChat/Pods-FireChat.debug.xcconfig"; sourceTree = "<group>"; };
 		44E34F8AD6B92A7719865BF4 /* Pods_FireChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8897EEBCF16D4B115EC6DDE /* Pods-FireChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChat.release.xcconfig"; path = "Target Support Files/Pods-FireChat/Pods-FireChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,8 +74,17 @@
 			isa = PBXGroup;
 			children = (
 				2C010A812ABE92150038D1A4 /* AuthService.swift */,
+				2CC87CC42ABEE60D0073DE3B /* Service.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		2CC87CC12ABEE5980073DE3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CC87CC22ABEE5A80073DE3B /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		97938A951ED8DFE1A981C9D0 /* Frameworks */ = {
@@ -99,6 +116,7 @@
 		CE5328EE26D743FF0037BC94 /* FireChat */ = {
 			isa = PBXGroup;
 			children = (
+				2CC87CC12ABEE5980073DE3B /* Model */,
 				CE53290626D744FE0037BC94 /* View */,
 				CE53290526D744FC0037BC94 /* ViewModel */,
 				CE53290426D744FA0037BC94 /* Controller */,
@@ -129,6 +147,7 @@
 			children = (
 				CE6C13CC26E619E40087CF55 /* Authentication */,
 				CE76FCA926DCB3DF00634804 /* ConversationsController.swift */,
+				2CC87CBD2ABEC43C0073DE3B /* NewMessageController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,6 +165,7 @@
 			children = (
 				CE0EF4402850957E00202AFD /* InputContainerView.swift */,
 				CE0EF4432850A24A00202AFD /* CustomTextField.swift */,
+				2CC87CBF2ABEE1340073DE3B /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,12 +318,16 @@
 				2C010A822ABE92150038D1A4 /* AuthService.swift in Sources */,
 				CE5328F026D743FF0037BC94 /* AppDelegate.swift in Sources */,
 				CE76FCAA26DCB3DF00634804 /* ConversationsController.swift in Sources */,
+				2CC87CC02ABEE1340073DE3B /* UserCell.swift in Sources */,
 				CE5328F226D743FF0037BC94 /* SceneDelegate.swift in Sources */,
+				2CC87CC32ABEE5A80073DE3B /* User.swift in Sources */,
+				2CC87CC52ABEE60D0073DE3B /* Service.swift in Sources */,
 				CE6C13D026E61A530087CF55 /* RegistrationController.swift in Sources */,
 				CE6C13CE26E61A330087CF55 /* LoginController.swift in Sources */,
 				CECE3F6A26E769DA00A9BC92 /* Extensions.swift in Sources */,
 				CEBA38842851D4A20062B976 /* LoginViewModel.swift in Sources */,
 				CE0EF4442850A24A00202AFD /* CustomTextField.swift in Sources */,
+				2CC87CBE2ABEC43C0073DE3B /* NewMessageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

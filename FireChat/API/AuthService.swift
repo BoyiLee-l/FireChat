@@ -36,7 +36,7 @@ struct AuthService {
         // 上傳圖像數據到 Firebase Storage
         ref.putData(imageData, metadata: nil) {(meta, error) in
             if let error = error {
-                print("DEBUG Failed to upload image with error \(error.localizedDescription)")
+                completion?(error)
                 return
             }
             
@@ -50,20 +50,20 @@ struct AuthService {
                 // 創建 Firebase 使用者帳號
                 Auth.auth().createUser(withEmail: credentials.email, password: credentials.password) {(result,error) in
                     if let error = error {
-                        print("DEBUG Failed to upload image with error \(error.localizedDescription)")
+                        completion?(error)
                         return
                     }
-
+                    
                     // 從認證結果中獲取用戶ID
                     guard let uid = result?.user.uid else { return }
-
+                    
                     // 準備要保存到 Firestore 的用戶數據
                     let data = ["email": credentials.email,
                                 "fullname": credentials.fullname,
                                 "profileImageUrl": profileImageUrl,
                                 "uid": uid,
                                 "username": credentials.username] as [String : Any]
-
+                    
                     // 將用戶數據保存到 Firestore
                     Firestore.firestore().collection("users").document(uid).setData(data, completion: completion)
                 }
