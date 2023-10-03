@@ -14,7 +14,13 @@ target 'FireChat' do
   pod 'Firebase/Storage'
   pod 'SDWebImage', '~> 5.0'
   pod 'JGProgressHUD'
+
+  target 'FireChatTests' do
+      inherit! :search_paths
+      pod 'Firebase'
+  end
 end
+
 
 post_install do |installer|
     installer.generated_projects.each do |project|
