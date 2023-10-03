@@ -36,7 +36,8 @@ final class FireChatTests: XCTestCase {
                 XCTFail("Error: \(error.localizedDescription)")
                 return
             } else {
-                XCTAssertNoThrow(result, "Login result should be true for successful login")
+                XCTAssertNotNil(result, "Login result should not be nil for successful login")
+                XCTAssertEqual(result?.user.email, email, "User email should match the provided email")
             }
             expectation.fulfill()
         }
