@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2C010A822ABE92150038D1A4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C010A812ABE92150038D1A4 /* AuthService.swift */; };
+		2C2BCE242BE8D02300BBF6B3 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE232BE8D02200BBF6B3 /* ChatController.swift */; };
 		2C79B44A2ACACA2000D7AA36 /* FireChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79B4492ACACA2000D7AA36 /* FireChatTests.swift */; };
 		2CB9CE252AB1A26200B06AEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */; };
 		2CC87CBE2ABEC43C0073DE3B /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC87CBD2ABEC43C0073DE3B /* NewMessageController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		0270D32BA1198A47E9E09636 /* Pods_FireChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C010A812ABE92150038D1A4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		2C2BCE232BE8D02200BBF6B3 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		2C79B4472ACACA2000D7AA36 /* FireChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C79B4492ACACA2000D7AA36 /* FireChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireChatTests.swift; sourceTree = "<group>"; };
 		2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				CE6C13CC26E619E40087CF55 /* Authentication */,
 				CE76FCA926DCB3DF00634804 /* ConversationsController.swift */,
 				2CC87CBD2ABEC43C0073DE3B /* NewMessageController.swift */,
+				2C2BCE232BE8D02200BBF6B3 /* ChatController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				CE6C13CE26E61A330087CF55 /* LoginController.swift in Sources */,
 				CECE3F6A26E769DA00A9BC92 /* Extensions.swift in Sources */,
 				CEBA38842851D4A20062B976 /* LoginViewModel.swift in Sources */,
+				2C2BCE242BE8D02300BBF6B3 /* ChatController.swift in Sources */,
 				CE0EF4442850A24A00202AFD /* CustomTextField.swift in Sources */,
 				2CC87CBE2ABEC43C0073DE3B /* NewMessageController.swift in Sources */,
 			);
