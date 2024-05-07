@@ -10,10 +10,15 @@ import UIKit
 
 private let reuseIdentifer = "UserCell"
 
+protocol NewMessageControllerDelegate: AnyObject {
+    func controller(_ controller: NewMessageController, wantsToStartChatWith user: User)
+}
+
 class NewMessageController: UITableViewController {
     
     //MARK: - Properties
     private var users = [User]()
+    weak var delegate: NewMessageControllerDelegate?
     
     //MARK: - Lifecycle
     
@@ -60,5 +65,11 @@ extension NewMessageController {
         print("DEBUG: Index row is \(indexPath.row)")
         print("DEBUG: User in array is \(users[indexPath.row].username)")
         return cell
+    }
+}
+
+extension NewMessageController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.controller(self, wantsToStartChatWith: users[indexPath.row])
     }
 }
