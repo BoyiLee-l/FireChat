@@ -13,6 +13,7 @@
 		2C2BCE2A2BEC937800BBF6B3 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE292BEC937800BBF6B3 /* MessageCell.swift */; };
 		2C2BCE2C2BEC998100BBF6B3 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE2B2BEC998100BBF6B3 /* Message.swift */; };
 		2C2BCE2E2BEC9EEE00BBF6B3 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE2D2BEC9EEE00BBF6B3 /* MessageViewModel.swift */; };
+		2C2BCE302BECA8ED00BBF6B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE2F2BECA8ED00BBF6B3 /* Constants.swift */; };
 		2C79B44A2ACACA2000D7AA36 /* FireChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79B4492ACACA2000D7AA36 /* FireChatTests.swift */; };
 		2CB9CE252AB1A26200B06AEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */; };
 		2CC87CBE2ABEC43C0073DE3B /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC87CBD2ABEC43C0073DE3B /* NewMessageController.swift */; };
@@ -55,6 +56,7 @@
 		2C2BCE292BEC937800BBF6B3 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		2C2BCE2B2BEC998100BBF6B3 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2C2BCE2D2BEC9EEE00BBF6B3 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		2C2BCE2F2BECA8ED00BBF6B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C79B4472ACACA2000D7AA36 /* FireChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C79B4492ACACA2000D7AA36 /* FireChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireChatTests.swift; sourceTree = "<group>"; };
 		2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				CECE3F6926E769DA00A9BC92 /* Extensions.swift */,
+				2C2BCE2F2BECA8ED00BBF6B3 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5328F426D743FF0037BC94 /* ViewController.swift in Sources */,
+				2C2BCE302BECA8ED00BBF6B3 /* Constants.swift in Sources */,
 				CEE2B2B328531FE1007B2D52 /* RegistrationViewModel.swift in Sources */,
 				CE0EF4412850957E00202AFD /* InputContainerView.swift in Sources */,
 				2C010A822ABE92150038D1A4 /* AuthService.swift in Sources */,
