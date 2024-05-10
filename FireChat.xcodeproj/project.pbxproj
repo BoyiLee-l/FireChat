@@ -14,6 +14,8 @@
 		2C2BCE2C2BEC998100BBF6B3 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE2B2BEC998100BBF6B3 /* Message.swift */; };
 		2C2BCE2E2BEC9EEE00BBF6B3 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE2D2BEC9EEE00BBF6B3 /* MessageViewModel.swift */; };
 		2C2BCE302BECA8ED00BBF6B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE2F2BECA8ED00BBF6B3 /* Constants.swift */; };
+		2C2BCE322BEE0AE200BBF6B3 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE312BEE0AE200BBF6B3 /* ConversationCell.swift */; };
+		2C2BCE342BEE0F5200BBF6B3 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE332BEE0F5200BBF6B3 /* ConversationViewModel.swift */; };
 		2C79B44A2ACACA2000D7AA36 /* FireChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79B4492ACACA2000D7AA36 /* FireChatTests.swift */; };
 		2CB9CE252AB1A26200B06AEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */; };
 		2CC87CBE2ABEC43C0073DE3B /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC87CBD2ABEC43C0073DE3B /* NewMessageController.swift */; };
@@ -57,6 +59,8 @@
 		2C2BCE2B2BEC998100BBF6B3 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2C2BCE2D2BEC9EEE00BBF6B3 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		2C2BCE2F2BECA8ED00BBF6B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2C2BCE312BEE0AE200BBF6B3 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		2C2BCE332BEE0F5200BBF6B3 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
 		2C79B4472ACACA2000D7AA36 /* FireChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C79B4492ACACA2000D7AA36 /* FireChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireChatTests.swift; sourceTree = "<group>"; };
 		2CB9CE242AB1A26100B06AEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 			children = (
 				CEE2B2B428531FFA007B2D52 /* Authentication */,
 				2C2BCE2D2BEC9EEE00BBF6B3 /* MessageViewModel.swift */,
+				2C2BCE332BEE0F5200BBF6B3 /* ConversationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				2CC87CBF2ABEE1340073DE3B /* UserCell.swift */,
 				2C2BCE272BEA288000BBF6B3 /* CustomInputAccessoryView.swift */,
 				2C2BCE292BEC937800BBF6B3 /* MessageCell.swift */,
+				2C2BCE312BEE0AE200BBF6B3 /* ConversationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -460,12 +466,14 @@
 				2CC87CC32ABEE5A80073DE3B /* User.swift in Sources */,
 				2CC87CC52ABEE60D0073DE3B /* Service.swift in Sources */,
 				2C2BCE2A2BEC937800BBF6B3 /* MessageCell.swift in Sources */,
+				2C2BCE342BEE0F5200BBF6B3 /* ConversationViewModel.swift in Sources */,
 				CE6C13D026E61A530087CF55 /* RegistrationController.swift in Sources */,
 				CE6C13CE26E61A330087CF55 /* LoginController.swift in Sources */,
 				CECE3F6A26E769DA00A9BC92 /* Extensions.swift in Sources */,
 				CEBA38842851D4A20062B976 /* LoginViewModel.swift in Sources */,
 				2C2BCE242BE8D02300BBF6B3 /* ChatController.swift in Sources */,
 				CE0EF4442850A24A00202AFD /* CustomTextField.swift in Sources */,
+				2C2BCE322BEE0AE200BBF6B3 /* ConversationCell.swift in Sources */,
 				2C2BCE2C2BEC998100BBF6B3 /* Message.swift in Sources */,
 				2CC87CBE2ABEC43C0073DE3B /* NewMessageController.swift in Sources */,
 				2C2BCE282BEA288000BBF6B3 /* CustomInputAccessoryView.swift in Sources */,

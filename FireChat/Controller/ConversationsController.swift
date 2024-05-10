@@ -14,6 +14,7 @@ class ConversationsController: UIViewController {
     
     //MARK: - Properties
     private let myTableView = UITableView()
+    private var conversations = [Conversation]()
     
     private let newMessageButton: UIButton = {
         let button = UIButton(type: .system)
@@ -30,6 +31,12 @@ class ConversationsController: UIViewController {
         super.viewDidLoad()
         configureUI()
         authenticateUser()
+        fetchConversations()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavigantionBar(withTitle: "Messages", prefersLargeTitles: true)
     }
     
     //MARK: - Selectors
@@ -47,6 +54,14 @@ class ConversationsController: UIViewController {
     }
     
     //MARK: API
+    
+    func fetchConversations() {
+        Service.fetchConversations { conversations in
+            self.conversations = conversations
+            self.myTableView.reloadData()
+        }
+    }
+    
     func authenticateUser() {
         if Auth.auth().currentUser?.uid == nil {
             print("DEBUG: User is not logged in. Present login screen here....")
@@ -79,7 +94,6 @@ class ConversationsController: UIViewController {
     
     func configureUI() {
         view.backgroundColor = .white
-        configureNavigantionBar(withTitle: "Messages", prefersLargeTitles: true)
         configureTableView()
         
         let image = UIImage(systemName: "person.circle.fill")
@@ -95,7 +109,7 @@ class ConversationsController: UIViewController {
     func configureTableView() {
         myTableView.backgroundColor = .white
         myTableView.rowHeight = 80
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifer)
+        myTableView.register(ConversationCell.self, forCellReuseIdentifier: reuseIdentifer)
         myTableView.tableFooterView = UIView()
         myTableView.delegate = self
         myTableView.dataSource = self
@@ -107,20 +121,26 @@ class ConversationsController: UIViewController {
 
 extension ConversationsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return conversations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifer, for: indexPath)
-        cell.textLabel?.text = "text"
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifer, for: indexPath) as! ConversationCell
+        cell.conversation = conversations[indexPath.row]
         return cell
+    }
+    
+    func showChatController(forUser user: User) {
+        let controller = ChatController(user: user)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
 //MARK: - UITableViewDelegate
 extension ConversationsController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let user = conversations[indexPath.row].user
+        showChatController(forUser: user)
     }
 }
 
@@ -128,7 +148,6 @@ extension ConversationsController: UITableViewDelegate {
 extension ConversationsController: NewMessageControllerDelegate {
     func controller(_ controller: NewMessageController, wantsToStartChatWith user: User) {
         controller.dismiss(animated: true, completion: nil)
-        let chat = ChatController(user: user)
-        navigationController?.pushViewController(chat, animated: true)
+        showChatController(forUser: user)
     }
 }
