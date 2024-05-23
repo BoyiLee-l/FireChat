@@ -10,6 +10,7 @@
 		2C010A822ABE92150038D1A4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C010A812ABE92150038D1A4 /* AuthService.swift */; };
 		2C08CAEF2BFDE1AD000CA94E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C08CAEE2BFDE1AD000CA94E /* ProfileViewModel.swift */; };
 		2C08CAF12BFDE813000CA94E /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C08CAF02BFDE813000CA94E /* ProfileCell.swift */; };
+		2C08CAF62BFF3B75000CA94E /* ProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C08CAF52BFF3B75000CA94E /* ProfileFooter.swift */; };
 		2C15745B2BFDC9B6007DC377 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15745A2BFDC9B6007DC377 /* ProfileController.swift */; };
 		2C15745D2BFDCBC4007DC377 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15745C2BFDCBC4007DC377 /* ProfileHeader.swift */; };
 		2C2BCE242BE8D02300BBF6B3 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2BCE232BE8D02200BBF6B3 /* ChatController.swift */; };
@@ -59,6 +60,7 @@
 		2C010A812ABE92150038D1A4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		2C08CAEE2BFDE1AD000CA94E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		2C08CAF02BFDE813000CA94E /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		2C08CAF52BFF3B75000CA94E /* ProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFooter.swift; sourceTree = "<group>"; };
 		2C15745A2BFDC9B6007DC377 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		2C15745C2BFDCBC4007DC377 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		2C2BCE232BE8D02200BBF6B3 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				2C2BCE312BEE0AE200BBF6B3 /* ConversationCell.swift */,
 				2C15745C2BFDCBC4007DC377 /* ProfileHeader.swift */,
 				2C08CAF02BFDE813000CA94E /* ProfileCell.swift */,
+				2C08CAF52BFF3B75000CA94E /* ProfileFooter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				CE0EF4412850957E00202AFD /* InputContainerView.swift in Sources */,
 				2C010A822ABE92150038D1A4 /* AuthService.swift in Sources */,
 				2C2BCE2E2BEC9EEE00BBF6B3 /* MessageViewModel.swift in Sources */,
+				2C08CAF62BFF3B75000CA94E /* ProfileFooter.swift in Sources */,
 				CE5328F026D743FF0037BC94 /* AppDelegate.swift in Sources */,
 				CE76FCAA26DCB3DF00634804 /* ConversationsController.swift in Sources */,
 				2CC87CC02ABEE1340073DE3B /* UserCell.swift in Sources */,
